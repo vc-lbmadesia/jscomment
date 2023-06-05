@@ -1,0 +1,23 @@
+{
+  "name": "jscomment",
+  "version": "1.0.1",
+  "description": "jscomment is help to generate comment for code documentation ",
+  "main": "index.js",
+  "scripts": {
+    "start":"nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lb Madesia",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vc-lbmadesia/jscomment.git"
+  },
+  "keywords": [
+    "route-access"
+  ],
+  "bugs": {
+    "url": "https://github.com/vc-lbmadesia/jscomment/issues"
+  },
+  "homepage": "https://github.com/vc-lbmadesia/jscomment#readme"
+}
