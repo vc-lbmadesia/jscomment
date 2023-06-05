@@ -18,8 +18,8 @@ const commentetor = (path) => {
               slag[slag.length - 1].match(/\(/) ||
               slag[slag.length - 1].match(/\* @/) ||
               slag[slag.length - 1].match(/\*@/) ||
-              slag[slag.length - 2].match(/\*\//) ||
-              slag[slag.length - 3].match(/\*\//)
+              (slag[slag.length - 2] && slag[slag.length - 2].match(/\*\//)) ||
+              (slag[slag.length - 3] && slag[slag.length - 3].match(/\*\//))
             ) {
               arr2 += `function ${arr1[j]}`;
               console.log("skippppppp");
@@ -62,7 +62,7 @@ const commentetor = (path) => {
           }
           await fs.writeFile(path + file[i], arr2);
         } else {
-          // await routeAccess(path + file[i]+'/');
+          await commentetor(path + file[i] + "/");
         }
       }
       resolve(true);
